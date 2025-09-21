@@ -11,7 +11,7 @@
 
 **A modern, responsive portfolio website showcasing 10+ years of AI Product Management expertise**
 
-[🚀 Live Demo](https://yourusername.github.io/prateek-portfolio) • [📧 Contact](mailto:prateekkiran@gmail.com) • [💼 LinkedIn](https://linkedin.com/in/prateekkiran)
+[🚀 Live Demo](https://prateekkiran.github.io/prateek-portfolio/) • [📧 Contact](mailto:prateekkiran@gmail.com) • [💼 LinkedIn](https://linkedin.com/in/prateekkiran)
 
 </div>
 
