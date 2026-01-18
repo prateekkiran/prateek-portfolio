@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+/* ===== DESIGN TOKENS - Bauhaus Aesthetic ===== */
+:root {
+  /* Colors */
+  --background: #F0F0F0;
+  --foreground: #121212;
+  --primary-red: #D02020;
+  --primary-blue: #1040C0;
+  --primary-yellow: #F0C020;
+  --border: #121212;
+  --muted: #E0E0E0;
+  --muted-foreground: #666666;
+  --white: #FFFFFF;
+}
+
+@theme inline {
+  /* Colors - Direct values for Tailwind v4 */
+  --color-background: #F0F0F0;
+  --color-foreground: #121212;
+  --color-muted: #E0E0E0;
+  --color-muted-foreground: #666666;
+  --color-border: #121212;
+  --color-white: #FFFFFF;
+  --color-primary-red: #D02020;
+  --color-primary-blue: #1040C0;
+  --color-primary-yellow: #F0C020;
+
+  /* Font family for Tailwind classes */
+  --font-heading: var(--font-outfit), system-ui, sans-serif;
+}
+
+/* ===== BASE STYLES ===== */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-outfit), system-ui, sans-serif;
+  font-weight: 500;
+}
+
+/* ===== FONT CLASSES ===== */
+.font-heading {
+  font-family: var(--font-outfit), system-ui, sans-serif;
+  font-weight: 900;
+}
+
+.font-body {
+  font-family: var(--font-outfit), system-ui, sans-serif;
+  font-weight: 500;
+}
+
+/* ===== BAUHAUS SHADOWS ===== */
+.shadow-hard-sm {
+  box-shadow: 3px 3px 0px 0px #121212;
+}
+
+.shadow-hard {
+  box-shadow: 4px 4px 0px 0px #121212;
+}
+
+.shadow-hard-md {
+  box-shadow: 6px 6px 0px 0px #121212;
+}
+
+.shadow-hard-lg {
+  box-shadow: 8px 8px 0px 0px #121212;
+}
+
+/* ===== GEOMETRIC SHAPES ===== */
+.shape-triangle {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.shape-triangle-right {
+  clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+}
+
+/* ===== DOT PATTERN ===== */
+.bg-dot-pattern {
+  background-image: radial-gradient(#121212 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+}
+
+/* ===== SECTION DIVIDER ===== */
+.section-divider {
+  border-bottom: 4px solid #121212;
+}
+
+/* ===== SCROLLBAR STYLING ===== */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--foreground);
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
+
+/* ===== FOCUS STATES ===== */
+*:focus-visible {
+  outline: 2px solid var(--foreground);
+  outline-offset: 2px;
+}
+
+/* ===== SELECTION ===== */
+::selection {
+  background: var(--primary-yellow);
+  color: var(--foreground);
+}
+
+/* ===== SMOOTH SCROLL ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
