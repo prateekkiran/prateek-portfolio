@@ -42,6 +42,11 @@ export function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Text content */}
           <div className="order-2 lg:order-1">
+            {/* Name */}
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl uppercase tracking-tight text-[#1040C0] mb-2">
+              Prateek Kiran
+            </h2>
+
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#1040C0] border-2 border-black mb-8">
               <span className="w-2 h-2 rounded-full bg-[#F0C020]" />
