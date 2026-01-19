@@ -9,24 +9,28 @@ const stats = [
   { icon: Zap, value: "10+", label: "Years Building" },
 ];
 
-// Bauhaus geometric composition
-function GeometricComposition() {
+// Profile photo with Bauhaus geometric framing
+function ProfileComposition() {
   return (
-    <div className="relative w-full h-[300px] md:h-[400px] lg:h-[500px]">
-      {/* Large blue circle */}
-      <div className="absolute top-0 right-0 w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full bg-[#1040C0] border-4 border-black" />
+    <div className="relative w-full max-w-[320px] md:max-w-[400px] lg:max-w-[450px] mx-auto">
+      {/* Decorative shapes behind */}
+      <div className="absolute -top-4 -right-4 md:-top-6 md:-right-6 w-24 h-24 md:w-32 md:h-32 bg-[#1040C0] border-4 border-black -z-10" />
+      <div className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 w-20 h-20 md:w-28 md:h-28 rounded-full bg-[#F0C020] border-4 border-black -z-10" />
 
-      {/* Yellow rotated square */}
-      <div className="absolute top-1/4 left-1/4 w-32 h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 bg-[#F0C020] border-4 border-black rotate-45" />
+      {/* Main photo container */}
+      <div className="relative border-4 border-black shadow-[8px_8px_0px_0px_black] bg-white p-2">
+        <img
+          src="/prateek-portfolio/profile.png"
+          alt="Prateek Kiran"
+          className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-300"
+        />
 
-      {/* Red square with triangle inside */}
-      <div className="absolute bottom-8 left-8 md:bottom-12 md:left-12 w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 bg-[#D02020] border-4 border-black flex items-center justify-center">
-        <div className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-white shape-triangle" />
+        {/* Red accent bar */}
+        <div className="absolute bottom-0 left-0 right-0 h-2 bg-[#D02020]" />
       </div>
 
-      {/* Small decorative elements */}
-      <div className="absolute top-1/2 right-1/4 w-6 h-6 md:w-8 md:h-8 rounded-full bg-black" />
-      <div className="absolute bottom-1/3 right-1/3 w-4 h-4 md:w-6 md:h-6 bg-white border-2 border-black" />
+      {/* Small geometric accents */}
+      <div className="absolute top-1/2 -right-3 md:-right-4 w-6 h-6 md:w-8 md:h-8 bg-[#D02020] border-2 border-black rotate-45" />
     </div>
   );
 }
@@ -87,9 +91,9 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Geometric composition */}
+          {/* Profile photo */}
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
-            <GeometricComposition />
+            <ProfileComposition />
           </div>
         </div>
 
